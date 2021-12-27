@@ -1,0 +1,9 @@
+
+^
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ßÿÀ‘
+R
+java:S1128"7Remove this unused import 'org.apache.http.HttpStatus'.(ÌÃ—ëüÿÿÿÿ
+P
+java:S1128":Remove this unused import 'org.apache.http.protocol.HTTP'.(×…Æ‹
+[
+java:S1128"@Remove this unused import 'org.springframework.http.HttpMethod'.(Ê¨Ä¡øÿÿÿÿ

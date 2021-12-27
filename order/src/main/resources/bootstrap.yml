@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: liuc
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: 172.27.176.27:8848
+        username: nacos
+        password: nacos
+        namespace: 551800b1-899a-4cff-a58f-f8748add7b2e
+        group: liuc204
+        refresh-enabled: true
+  application:
+    name: order-service

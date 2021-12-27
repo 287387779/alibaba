@@ -1,0 +1,24 @@
+server:
+  port: 8010
+  servlet:
+    context-path: /store
+spring:
+  application:
+    name: store-service
+  cloud:
+    nacos:
+      server-addr: 172.27.176.27:8848
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: 551800b1-899a-4cff-a58f-f8748add7b2e
+        group: liuc204
+        # ephemeral: false  # 默认=true（临时实例）  当服务宕机 超过心跳 就会将实例剔除掉
+        #永久实例   哪怕宕机了也不会删除实例  当服务宕机 永远不会剔除掉
+        weight:  1  #通常要结合 安装 权重的负载均衡策略， 权重越高分配的流量就越大(0-1之间)
+        #    public static final long DEFAULT_HEART_BEAT_TIMEOUT = TimeUnit.SECONDS.toMillis(15);
+        #    public static final long DEFAULT_IP_DELETE_TIMEOUT = TimeUnit.SECONDS.toMillis(30);
+        #    public static final long DEFAULT_HEART_BEAT_INTERVAL = TimeUnit.SECONDS.toMillis(5);
+        heart-beat-timeout: 150000  # 15sec
+        ip-delete-timeout: 30000    # 30sec
+        heart-beat-interval: 5000   # 5sec
